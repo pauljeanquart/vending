@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">PPE Vending Simulator</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!-- <li class="nav-item disabled">
+                        <a class="nav-link" href="#">Link</a>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+
+                <svg width="420" height="240" viewBox="0 0 420 240" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <!-- Metallic coil gradient -->
+                        <linearGradient id="coilGrad" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#f2f2f2" />
+                            <stop offset="50%" stop-color="#bdbdbd" />
+                            <stop offset="100%" stop-color="#888" />
+                        </linearGradient>
+                    </defs>
+
+                    <!-- Shelf housing -->
+                    <rect x="10" y="20" width="400" height="200" rx="14" fill="#2f2f2f" />
+                    <rect x="20" y="30" width="380" height="180" rx="10" fill="#1f1f1f" />
+
+                    <!-- Shelf floor -->
+                    <rect x="30" y="170" width="360" height="10" rx="4" fill="#555" />
+
+                    <!-- Coil motors -->
+                    <g fill="#9a9a9a">
+                        <rect x="55" y="105" width="12" height="30" rx="3" />
+                        <rect x="155" y="105" width="12" height="30" rx="3" />
+                        <rect x="255" y="105" width="12" height="30" rx="3" />
+                    </g>
+
+                    <!-- Front view spirals (concentric circles) -->
+                    <g stroke-linecap="round" fill="none">
+                        <!-- Left coil (animated) -->
+                        <circle cx="80" cy="120" r="18" stroke="url(#coilGrad)" stroke-width="6">
+                            <animateTransform class="coil-1" attributeName="transform" type="rotate" from="0 80 120"
+                                to="360 80 120" dur="1.6s" repeatCount="1" begin="indefinite" />
+                        </circle>
+                        <circle cx="80" cy="120" r="14" stroke="#666" stroke-width="2">
+                            <animateTransform class="coil-1" attributeName="transform" type="rotate" from="0 80 120"
+                                to="360 80 120" dur="1.6s" repeatCount="1" begin="indefinite" />
+                        </circle>
+                        <circle cx="80" cy="120" r="10" stroke="#444" stroke-width="2">
+                            <animateTransform class="coil-1" attributeName="transform" type="rotate" from="0 80 120"
+                                to="360 80 120" dur="1.6s" repeatCount="1" begin="indefinite" />
+                        </circle>
+                        <circle cx="80" cy="120" r="6" stroke="#222" stroke-width="2">
+                            <animateTransform class="coil-1" attributeName="transform" type="rotate" from="0 80 120"
+                                to="360 80 120" dur="1.6s" repeatCount="1" begin="indefinite" />
+                        </circle>
+
+
+                        <!-- Middle coil (animated) -->
+                        <circle cx="180" cy="120" r="18" stroke="url(#coilGrad)" stroke-width="6">
+                            <animateTransform class="coil-2" attributeName="transform" type="rotate" from="0 180 120"
+                                to="360 180 120" dur="1.6s" repeatCount="1" begin="indefinite" />
+                        </circle>
+                        <circle cx="180" cy="120" r="14" stroke="#666" stroke-width="2">
+                            <animateTransform class="coil-2" attributeName="transform" type="rotate" from="0 180 120"
+                                to="360 180 120" dur="1.6s" repeatCount="1" begin="indefinite" />
+                        </circle>
+                        <circle cx="180" cy="120" r="10" stroke="#444" stroke-width="2">
+                            <animateTransform class="coil-2" attributeName="transform" type="rotate" from="0 180 120"
+                                to="360 180 120" dur="1.6s" repeatCount="1" begin="indefinite" />
+                        </circle>
+                        <circle cx="180" cy="120" r="6" stroke="#222" stroke-width="2">
+                            <animateTransform class="coil-2" attributeName="transform" type="rotate" from="0 180 120"
+                                to="360 180 120" dur="1.6s" repeatCount="1" begin="indefinite" />
+                        </circle>
+
+                        <!-- Right coil (animated) -->
+                        <circle cx="280" cy="120" r="18" stroke="url(#coilGrad)" stroke-width="6">
+                            <animateTransform class="coil-3" attributeName="transform" type="rotate" from="0 280 120"
+                                to="360 280 120" dur="1.6s" repeatCount="1" begin="indefinite" />
+                        </circle>
+                        <circle cx="280" cy="120" r="14" stroke="#666" stroke-width="2">
+                            <animateTransform class="coil-3" attributeName="transform" type="rotate" from="0 280 120"
+                                to="360 280 120" dur="1.6s" repeatCount="1" begin="indefinite" />
+                        </circle>
+                        <circle cx="280" cy="120" r="10" stroke="#444" stroke-width="2">
+                            <animateTransform class="coil-3" attributeName="transform" type="rotate" from="0 280 120"
+                                to="360 280 120" dur="1.6s" repeatCount="1" begin="indefinite" />
+                        </circle>
+                        <circle cx="280" cy="120" r="6" stroke="#222" stroke-width="2">
+                            <animateTransform class="coil-3" attributeName="transform" type="rotate" from="0 280 120"
+                                to="360 280 120" dur="1.6s" repeatCount="1" begin="indefinite" />
+                        </circle>
+
+                    </g>
+
+                    <!-- Products -->
+
+                    <g fill="#e0e0e0">
+                        <rect x="80" y="135" width="40" height="25" rx="4">
+                            <animateTransform class="coil-1" attributeName="transform" type="translate" from="0 0" to="0 38" dur="1.6s"
+                                repeatCount="1"  begin="indefinite"/>
+                        </rect>
+                    </g>
+                    <g fill="#e0e0e0">
+                        <rect x="180" y="135" width="40" height="25" rx="4">
+                            <animateTransform class="coil-2" attributeName="transform" type="translate" from="0 0" to="0 38" dur="1.6s"
+                                repeatCount="1"  begin="indefinite"/>
+                        </rect>
+                    </g>
+                    <g fill="#e0e0e0">
+                        <rect x="280" y="135" width="40" height="25" rx="4">
+                            <animateTransform class="coil-3" attributeName="transform" type="translate" from="0 0" to="0 38" dur="1.6s"
+                                repeatCount="1"  begin="indefinite"/>
+                        </rect>
+                    </g>
+
+                    <!-- Divider bars -->
+                    <g fill="#444">
+                        <rect x="140" y="45" width="4" height="130" />
+                        <rect x="240" y="45" width="4" height="130" />
+                    </g>
+
+                      <!-- Coil numbers -->
+  <text x="80" y="180" text-anchor="middle" fill="#fff" font-family="Arial" font-size="16" font-weight="bold">1</text>
+  <text x="180" y="180" text-anchor="middle" fill="#fff" font-family="Arial" font-size="16" font-weight="bold">2</text>
+  <text x="280" y="180" text-anchor="middle" fill="#fff" font-family="Arial" font-size="16" font-weight="bold">3</text>
+
+                </svg>
+
+            </div>
+            <div class="col">
+
+                <svg width="240" height="460" viewBox="0 0 240 460" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <filter id="buttonShadow" x="-50%" y="-50%" width="200%" height="200%">
+                            <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000" flood-opacity="0.4" />
+                        </filter>
+                        <style>
+                            /* Depressable button style */
+                            .key {
+                                cursor: pointer;
+                                transition: all 0.1s ease-in-out;
+                            }
+
+                            .key:active {
+                                transform: translateY(2px);
+                                filter: none;
+                                fill: #b0b0b0;
+                            }
+
+                            .ok.key:active {
+                                fill: #388e3c;
+                            }
+                        </style>
+                    </defs>
+
+                    <!-- Background panel -->
+                    <rect x="10" y="10" width="220" height="440" rx="18" fill="#2f2f2f" />
+
+                    <!-- Display -->
+                    <rect x="30" y="25" width="180" height="40" rx="6" fill="#111" />
+                    <text id="display" x="120" y="52" text-anchor="middle" fill="#4cff4c" font-family="monospace"
+                        font-size="18">ENTER/SCAN BADGE</text>
+
+                    <!-- Large Circular 2 Button -->
+                    <g class="key">
+                        <circle cx="60" cy="105" r="32" fill="#a0ffa0" filter="url(#buttonShadow)" />
+                        <text x="60" y="105" text-anchor="middle" dominant-baseline="middle"
+                            font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="bold"
+                            fill="#000">2</text>
+                    </g>
+
+                    <!-- Keypad buttons -->
+                    <g font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" text-anchor="middle"
+                        dominant-baseline="middle">
+
+                        <!-- Row 1 -->
+                        <g class="key num" data-value="1">
+                            <rect class="keynum" x="30" y="155" width="50" height="50" rx="8" fill="#e0e0e0"
+                                filter="url(#buttonShadow)" />
+                            <text x="55" y="180">1</text>
+                        </g>
+                        <g class="key num" data-value="2">
+                            <rect x="95" y="155" width="50" height="50" rx="8" fill="#e0e0e0"
+                                filter="url(#buttonShadow)" />
+                            <text x="120" y="180">2</text>
+                        </g>
+                        <g class="key num" data-value="3">
+                            <rect x="160" y="155" width="50" height="50" rx="8" fill="#e0e0e0"
+                                filter="url(#buttonShadow)" />
+                            <text x="185" y="180">3</text>
+                        </g>
+
+                        <!-- Row 2 -->
+                        <g class="key num" data-value="4">
+                            <rect x="30" y="215" width="50" height="50" rx="8" fill="#e0e0e0"
+                                filter="url(#buttonShadow)" />
+                            <text x="55" y="240">4</text>
+                        </g>
+                        <g class="key num" data-value="5">
+                            <rect x="95" y="215" width="50" height="50" rx="8" fill="#e0e0e0"
+                                filter="url(#buttonShadow)" />
+                            <text x="120" y="240">5</text>
+                        </g>
+                        <g class="key num" data-value="6">
+                            <rect x="160" y="215" width="50" height="50" rx="8" fill="#e0e0e0"
+                                filter="url(#buttonShadow)" />
+                            <text x="185" y="240">6</text>
+                        </g>
+
+
+                        <!-- Row 3 -->
+                        <g class="key num" data-value="7">
+                            <rect x="30" y="275" width="50" height="50" rx="8" fill="#e0e0e0"
+                                filter="url(#buttonShadow)" />
+                            <text x="55" y="300">7</text>
+                        </g>
+                        <g class="key num" data-value="8">
+                            <rect x="95" y="275" width="50" height="50" rx="8" fill="#e0e0e0"
+                                filter="url(#buttonShadow)" />
+                            <text x="120" y="300">8</text>
+                        </g>
+                        <g class="key num" data-value="9">
+                            <rect x="160" y="275" width="50" height="50" rx="8" fill="#e0e0e0"
+                                filter="url(#buttonShadow)" />
+                            <text x="185" y="300">9</text>
+                        </g>
+
+                        <!-- Row 4 -->
+                        <g class="key x">
+                            <rect x="30" y="335" width="50" height="50" rx="8" fill="#cfcfcf"
+                                filter="url(#buttonShadow)" />
+                            <text x="55" y="360">X</text>
+                        </g>
+                        <g class="key num" data-value="0">
+                            <rect x="95" y="335" width="50" height="50" rx="8" fill="#e0e0e0"
+                                filter="url(#buttonShadow)" />
+                            <text x="120" y="360">0</text>
+                        </g>
+                        <g class="key">
+                            <rect x="160" y="335" width="50" height="50" rx="8" fill="#cfcfcf"
+                                filter="url(#buttonShadow)" />
+                            <!-- Coin return icon -->
+                            <g transform="translate(160,335)">
+                                <circle cx="25" cy="28" r="7" fill="#999" stroke="#555" stroke-width="1" />
+                                <path d="M32 18 a10 10 0 1 0 -6 18" fill="none" stroke="#333" stroke-width="2"
+                                    stroke-linecap="round" />
+                                <path d="M24 36 l-6 0 l3 -4 z" fill="#333" />
+                            </g>
+                        </g>
+                    </g>
+
+                    <!-- OK Button -->
+                    <g class="key ok">
+                        <rect x="40" y="395" width="160" height="35" rx="12" fill="#4caf50"
+                            filter="url(#buttonShadow)" />
+                        <text x="120" y="417" text-anchor="middle" dominant-baseline="middle"
+                            font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="bold" fill="#ffffff">
+                            OK
+                        </text>
+                    </g>
+                </svg>
+
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script>
+        let mode = 'badge'; // 'badge' or 'item'
+        let badgeInput = '';
+        let itemInput = '';
+        let ee = [
+            { "badge": "12345", "name": "Paul J" },
+            { "badge": "67890", "name": "Blaise H" }];
+        document.querySelectorAll('.key.num').forEach(button => {
+            button.addEventListener('click', () => {
+                const value = button.getAttribute('data-value');
+                const display = document.getElementById('display');
+                if (isNaN(display.textContent)) {
+                    display.textContent = value; // Replace if display is not a number
+                } else {
+                    display.textContent += value; // Append if display is a number
+                }
+                console.log('Button pressed:', value);
+                // Here you can add code to handle the button press, e.g., update display
+            });
+        });
+
+        document.querySelectorAll('.key.x').forEach(button => {
+            button.addEventListener('click', () => {
+                console.log('Button pressed: X');
+                // Here you can add code to handle the button press, e.g., update display
+                const display = document.getElementById('display');
+                display.textContent = 'ENTER/SCAN BADGE';
+            });
+        });
+
+        document.querySelectorAll('.key.ok').forEach(button => {
+            button.addEventListener('click', () => {
+                console.log('Button pressed: OK');
+                // Here you can add code to handle the button press, e.g., update display
+                const display = document.getElementById('display');
+
+                setTimeout(() => {
+                    if (mode === 'badge') {
+                        badgeInput = display.textContent;
+                        console.log('Badge entered:', badgeInput);
+                        let e = ee.find(e => e.badge === badgeInput);
+                        if (e) {
+                            display.textContent = `Welcome ${e.name}`;
+                            mode = 'item';
+                            setTimeout(() => {
+                                display.textContent = 'SELECT ITEM';
+                            }, 2000); // 1000 milliseconds = 1 second
+                        } else {
+                            display.textContent = 'INVALID BADGE';
+                            setTimeout(() => {
+                                display.textContent = 'ENTER/SCAN BADGE';
+                            }, 1000); // 1000 milliseconds = 1 second
+                        }
+                    }
+                    else if (mode === 'item') {
+                        itemInput = display.textContent;
+                        console.log('Item selected:', itemInput);
+                        if(triggerCoil(itemInput)) {
+                            console.log('Dispensing item for coil', itemInput);
+                        } else {
+                            console.log('Invalid item selection:', itemInput);
+                            display.textContent = 'INVALID SELECTION';
+                            setTimeout(() => {
+                                display.textContent = 'SELECT ITEM';
+                            }, 1000); // 1000 milliseconds = 1 second
+                            return;
+                        }
+                        display.textContent = `DISPENSING ${itemInput}`;
+
+                        mode = 'badge';
+                        setTimeout(() => {
+                            display.textContent = 'ENTER/SCAN BADGE';
+                        }, 2000); // 1000 milliseconds = 1 second
+                    }
+                }, 1000);
+
+            });
+        });
+
+        function triggerCoil(coil) {
+            const animationElements = document.querySelectorAll('.coil-' + coil);
+            if (animationElements.length === 0) {
+                return false;
+            }
+            animationElements.forEach(elem => {
+                elem.beginElement();
+            });
+            return true;
+        }
+
+    </script>
+</body>
+
+</html>
