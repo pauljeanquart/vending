@@ -1,0 +1,114 @@
+<svg width="240" height="460" viewBox="0 0 240 460" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="buttonShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+    <style>
+      /* Depressable button style */
+      .key {
+        cursor: pointer;
+        transition: all 0.1s ease-in-out;
+      }
+      .key:active {
+        transform: translateY(2px);
+        filter: none;
+        fill: #b0b0b0;
+      }
+      .ok.key:active {
+        fill: #388e3c;
+      }
+    </style>
+  </defs>
+
+  <!-- Background panel -->
+  <rect x="10" y="10" width="220" height="440" rx="18" fill="#2f2f2f"/>
+
+  <!-- Display -->
+  <rect x="30" y="25" width="180" height="40" rx="6" fill="#111"/>
+  <text x="120" y="52" text-anchor="middle" fill="#4cff4c"
+        font-family="monospace" font-size="18">ENTER CODE</text>
+
+  <!-- Large Circular 2 Button -->
+  <g class="key">
+    <circle cx="120" cy="105" r="32" fill="#e0e0e0" filter="url(#buttonShadow)"/>
+    <text x="120" y="105" text-anchor="middle" dominant-baseline="middle"
+          font-family="Arial, Helvetica, sans-serif"
+          font-size="28" font-weight="bold" fill="#000">2</text>
+  </g>
+
+  <!-- Keypad buttons -->
+  <g font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold"
+     text-anchor="middle" dominant-baseline="middle">
+    
+    <!-- Row 1 -->
+    <g class="key">
+      <rect x="30" y="155" width="50" height="50" rx="8" fill="#e0e0e0" filter="url(#buttonShadow)"/>
+      <text x="55" y="180">1</text>
+    </g>
+    <g class="key">
+      <rect x="95" y="155" width="50" height="50" rx="8" fill="#e0e0e0" filter="url(#buttonShadow)"/>
+      <text x="120" y="180">2</text>
+    </g>
+    <g class="key">
+      <rect x="160" y="155" width="50" height="50" rx="8" fill="#e0e0e0" filter="url(#buttonShadow)"/>
+      <text x="185" y="180">3</text>
+    </g>
+
+    <!-- Row 2 -->
+    <g class="key">
+      <rect x="30" y="215" width="50" height="50" rx="8" fill="#e0e0e0" filter="url(#buttonShadow)"/>
+      <text x="55" y="240">4</text>
+    </g>
+    <g class="key">
+      <rect x="95" y="215" width="50" height="50" rx="8" fill="#e0e0e0" filter="url(#buttonShadow)"/>
+      <text x="120" y="240">5</text>
+    </g>
+    <g class="key">
+      <rect x="160" y="215" width="50" height="50" rx="8" fill="#e0e0e0" filter="url(#buttonShadow)"/>
+      <text x="185" y="240">6</text>
+    </g>
+
+    <!-- Row 3 -->
+    <g class="key">
+      <rect x="30" y="275" width="50" height="50" rx="8" fill="#e0e0e0" filter="url(#buttonShadow)"/>
+      <text x="55" y="300">7</text>
+    </g>
+    <g class="key">
+      <rect x="95" y="275" width="50" height="50" rx="8" fill="#e0e0e0" filter="url(#buttonShadow)"/>
+      <text x="120" y="300">8</text>
+    </g>
+    <g class="key">
+      <rect x="160" y="275" width="50" height="50" rx="8" fill="#e0e0e0" filter="url(#buttonShadow)"/>
+      <text x="185" y="300">9</text>
+    </g>
+
+    <!-- Row 4 -->
+    <g class="key">
+      <rect x="30" y="335" width="50" height="50" rx="8" fill="#cfcfcf" filter="url(#buttonShadow)"/>
+      <text x="55" y="360">X</text>
+    </g>
+    <g class="key">
+      <rect x="95" y="335" width="50" height="50" rx="8" fill="#e0e0e0" filter="url(#buttonShadow)"/>
+      <text x="120" y="360">0</text>
+    </g>
+    <g class="key">
+      <rect x="160" y="335" width="50" height="50" rx="8" fill="#cfcfcf" filter="url(#buttonShadow)"/>
+      <!-- Coin return icon -->
+      <g transform="translate(160,335)">
+        <circle cx="25" cy="28" r="7" fill="#999" stroke="#555" stroke-width="1"/>
+        <path d="M32 18 a10 10 0 1 0 -6 18" fill="none" stroke="#333" stroke-width="2" stroke-linecap="round"/>
+        <path d="M24 36 l-6 0 l3 -4 z" fill="#333"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- OK Button -->
+  <g class="key ok">
+    <rect x="40" y="395" width="160" height="35" rx="12" fill="#4caf50" filter="url(#buttonShadow)"/>
+    <text x="120" y="417" text-anchor="middle" dominant-baseline="middle"
+          font-family="Arial, Helvetica, sans-serif"
+          font-size="18" font-weight="bold" fill="#ffffff">
+      OK
+    </text>
+  </g>
+</svg>
